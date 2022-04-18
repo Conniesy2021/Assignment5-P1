@@ -14,7 +14,7 @@
           >
           <template v-slot:before>
             <q-avatar size="xl">
-            <img src="https:/cdn.quasar.dev/img/avatar5.jpg">
+            <img :src="require('assets/avatar5.jpg')" alt="">
           </q-avatar>
           </template>
 
@@ -33,7 +33,7 @@
               no-caps />
         </div>
       </div>
-      <q-separator size="10px" color="grey-2" class="divider" />
+      <q-separator size="15px" color="pink-2" class="divider" />
 
       <q-list separator>
         <transition-group
@@ -49,37 +49,37 @@
 
             <q-item-section avatar top>
               <q-avatar>
-                <img src="https:/cdn.quasar.dev/img/avatar5.jpg">
+                <img :src="require('assets/avatar5.jpg')" alt="">
               </q-avatar>
             </q-item-section>
 
             <q-item-section>
-              <q-item-label><strong> Connie Pan </strong>  </q-item-label>
+              <q-item-label><strong> Connie </strong>  </q-item-label>
               <q-item-label class="qweet-content"> {{ qweet.content}}
               </q-item-label>
                 <div class="row justify-between q-mt-sm">
                   <q-btn
                     flat
                     round
-                    color="gray"
+                    color="pink"
                     icon="far fa-comment"/>
 
                   <q-btn
                     flat
                     round
-                    color="gray"
+                    color="pink"
                     icon="fas fa-retweet"/>
 
                     <q-btn
                     flat
                     round
-                    color="gray"
+                    color="pink"
                     icon="far fa-heart"/>
 
                     <q-btn
                     flat
                     round
-                    color="gray"
+                    color="pink"
                     icon="fas fa-trash"/>
 
               </div>
@@ -108,11 +108,23 @@
         qweets: [
                   {
                     content:  'There are two primary choices in life: to accept conditions as they exist, or accept the responsibility for changing them',
-                    date: 1635627999211
+                    date: 20210101
                   },
                   {
                     content:  'Aerodynamically the bumblebee shouldnt be able to fly but the bumblebee doesnt know that so it goes on flying anyway',
-                    date: 1635628100512
+                    date: 20220102
+                  },
+                   {
+                    content:  'To be or not to be, this is a question',
+                    date: 20220201
+                  },
+                  {
+                    content:  'Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.',
+                    date: 20220312
+                  },
+                  {
+                    content:  'You cannot improve your past, but you can improve your future. Once time is wasted, life is wasted.',
+                    date: 20220316
                   },
                 ]
 
@@ -142,8 +154,8 @@
 
     .new-qweet
       textarea
-        font-size: 19px
-        line-height: 1.4 !important
+        font-size: 15px
+        line-height: 1.6 !important
         border-color: grey-4
     .qweet-content
       white-space: pre-line
